@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\base.css">
+    <link rel="stylesheet" href="css\main-styles.css">
+    <title>主页</title>
+    <script src="js\jquery-3.5.js"></script>
+    <script src="js\mock.js"></script>
+    <script src="js\book-mock.js"></script>
+    <script src="js\main.js"></script>
+<body>
+    <div class="main">
+        <img src="imgs/bg .png" alt="">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="">
+            The books that know you
+            <div class="search-box">
+                <form action="search-result.html" target="-blank">
+                    <input type="text" name="search" class="search" placeholder="搜索">
+                    <button>
+                        <div class="icon1"></div>
+                    </button>
+                </form>
+            </div>
+            <div class="classify">
+                <a href="classify.html" target="-blank"><button>大类1</button></a>
+                <a href="classify.html" target="-blank"><button>大类2</button></a>
+                <a href="classify.html" target="-blank"><button>大类3</button></a>
+                <a href="classify.html" target="-blank"><button>大类4</button></a>
+            </div>
+        </div>
+    </div>
+    <button>
+        <div class="login-icon"></div>
+    </button>
+    <div id="aftername"></div>
+    <div class="loading">
+        <div class="welcome">
+            <h1>
+                <span>W</span>
+                <span>e</span>
+                <span>l</span>
+                <span>c</span>
+                <span>o</span>
+                <span>m</span>
+                <span>b</span>
+                <span>a</span>
+                <span>c</span>
+                <span>k</span>
+            </h1>
+        </div>
+        <span class="loadtext">Loading...</span>
+        <div class="red"></div>
+    </div>
+    <div class="register">
+        <button class="closeone"><img src="imgs/close.png" alt=""></button>
+        <div class="recommend">
+            <img src="imgs/logo.png" alt="">
+        </div>
+        <form action=" " id="login">
+            <div class="form">
+                <div class="item">
+                 <span>账&nbsp;号：</span> <input type="text" placeholder="用户名" name="name" id="username">
+                 <p class="tip">请输入密码</p>
+                </div>
+                <div class="item">
+                   <span> 密&nbsp;码：</span> <input type="password" placeholder="*******" name="password" id="pwd">
+                    <img src="imgs/eye-close.png" alt="" id="eye">
+                <p class="tips">请输入用户名</p>
+                </div>
+            </div>
+            <input type="button" class="btn" id="buton" value="登录">
+            <a href="register.html" target="-blank">注册</a>
+    </div>
+    </form>
+ <script>
+    var loading = document.querySelector('.loading');
+    document.addEventListener('keyup',function(e){
+        if (e.keyCode == 13) {
+                setTimeout(function () {
+                    loading.style.display = 'none';
+                }, 2000);
+            }
+    })
+</script> 
+</body>
+
+</html>

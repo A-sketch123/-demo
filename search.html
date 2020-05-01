@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/random.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <script src="js/jquery-3.5.js"></script>
+    <script src="js/mock.js"></script>
+    <script src="js/book-mock.js"></script>
+    <script src="js/random.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="imgs/推书-logo.png" alt="">
+        </div>
+        <div class="search">
+            <form action="search-result.html" target="-blank">
+                <input type="text" placeholder="请搜索" name="search" id="search">
+                <script>
+                    // 1.获取元素
+                    var text = document.getElementById('search');
+                    // 2.注册事件，获得焦点事件
+                    text.onfocus = function () {
+                        if (this.placeholder === '请搜索') {
+                            this.placeholder = '';
+                        }
+                        this.style.color = '#333'
+                    }
+                    // 3.注册事件，失去焦点
+                    text.onblur = function () {
+                        if (this.placeholder === '') {
+                            this.placeholder = '请搜索'
+                        }
+                        this.style.color = '#979797'
+                    }
+
+                </script>
+                <button class="search-icon">
+                    <img src="imgs\search.png" alt="">
+                </button>
+            </form>
+        </div>
+        <button class="classify">分类
+            <ol class="subnav">
+                <li class="li2"><a href="">分类1</a> </li>
+                <li class="li2"><a href="">分类2</a> </li>
+                <li class="li2"><a href="">分类3</a> </li>
+                <li class="li2"><a href="">分类4</a> </li>
+            </ol></button>
+    </div>
+    <div class="background">
+        <div class="text-search">搜索的东西</div>
+        <div class="spate"></div>
+    </div>
+    <script>
+        var text = document.querySelector('.text-search');
+        var replace = document.querySelector('.search-icon');
+        var content = document.getElementById('search')
+        replace.addEventListener('click', function () {
+            text.innerHTML = content.value;
+        })
+        document.addEventListener('keyup', function (event) {
+            if (event.keyCode == 13) {
+                text.innerHTML = content.value;
+            }
+        })   
+    </script>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <!-- 随即数部分 -->
+    <div class="detials">
+        <div class="photo">
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+        </div>
+        <div class="photo2">
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="item"><img src="" alt=""></div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+        </div>
+        <div class="flip">
+            <a href=""> <span>1</span></a>
+            <a href=""> <span>2</span></a>
+            <a href=""> <span>3</span></a>
+            <a href=""> <span>4</span></a>
+            <span>...</span>
+            <span>x</span>
+            <div class="text2">共x页</div>
+        </div>
+    </div>
+</body>
+
+</html>

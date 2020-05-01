@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\Carousel figure.css">
+    <link rel="stylesheet" href="css\classify-style.css">
+    <link rel="stylesheet" href="css\base.css">
+    <title>分类</title>
+    <script src="js/classify.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/jquery-3.5.js"></script>
+    <script src="js/mock.js"></script>
+    <script src="js/book-mock.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="imgs/推书-logo.png" alt="">
+        </div>
+        <div class="search">
+            <form action="search-result.html" target="-blank">
+                <input type="text" placeholder="请搜索" name="search" id="search">
+                <button class="search-icon">
+                    <img src="imgs\search.png" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="carousel">
+        <!-- 左箭头,防止页面跳转 -->
+        <a href="javascript:;" class="prev">&lt;</a>
+        <!-- 右箭头 -->
+        <a href="javascript:;" class="next">&gt;</a>
+        <ul>
+            <li>
+                <a href=""><img src="imgs\banner-1.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="imgs\banner-2.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="imgs\banner-3.png" alt=""></a>
+            </li>
+        </ul>
+        <!-- 圆点 -->
+        <ol class="point">
+        </ol>
+    </div>
+    <div class="wrap">
+    <div class="detials">
+        <div class="nav">
+            <span>分类：</span>
+           <a href=""><span>类1</span></a> 
+           <a href=""><span>类2</span></a> 
+           <a href=""><span>类3</span></a> 
+           <a href=""><span>类4</span></a> 
+        </div>
+        <div class="photo">
+            <div class="item" id="btn1"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn2"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn3"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn4"><button><img src="" alt=""></button></div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+        </div>
+        <div class="photo2">
+            <div class="item" id="btn5"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn6"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn7"><button><img src="" alt=""></button></div>
+            <div class="item" id="btn8"><button><img src="" alt=""></button></div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+            <div class="text">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="border"></div>
+            </div>
+        </div>
+        <div class="flip">
+        <a href=""> <span>1</span></a> 
+        <a href=""> <span>2</span></a> 
+        <a href=""> <span>3</span></a> 
+        <a href=""> <span>4</span></a> 
+            <span>...</span>
+            <span>x</span>
+            <div class="text2">共x页</div>
+        </div>
+           <!-- 详情页 -->
+    </div> 
+    <div class="particulars">
+        <div class="siteinfo">
+         <div class="closeagain"></div>
+           <div class="borderleft"></div>
+           <div class="container">
+               <div class="top">
+            <div class="item2"><img src="imgs\cover.png" alt=""></div>
+            <div class="message">
+                <div class="bookname" id="samename"></div>
+                <div class="iconsone">
+                    <div class="icondetial">
+                       <div class="people"></div>
+                       <div class="afterborder"></div>
+                       <div class="author"></div>
+                    </div>
+                    <div class="icondetial">
+                        <div class="people"></div>
+                        <div class="afterborder"></div>
+                        <div class="author"></div>
+                     </div>
+                     <div class="icondetial">
+                        <div class="people"></div>
+                        <div class="afterborder"></div>
+                        <div class="author"></div>
+                     </div>
+                     <div class="icondetial">
+                        <div class="people"></div>
+                        <div class="afterborder"></div>
+                        <div class="author">图书馆藏书&nbsp;：
+                            <span>11</span>本
+                           <p id="position"></p> 
+                        </div>
+                     </div>
+                </div>
+                <div class="iconstwo">
+                    <div class="icondetial">
+                        <div class="people"></div>
+                        <div class="afterborder"></div>
+                        <a href=""><img src="imgs\链接图标.png" alt=""></a>
+                       <a href=""></a>
+                     </div>
+                     <div class="icondetial">
+                        <div class="people"></div>
+                        <div class="afterborder"></div>
+                       <a href=""></a>
+                       <a href=""></a>
+                       <a href=""></a>
+                     </div>
+                </div>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="introductions">作者简介</div>
+            <div class="detials-introduction"></div>
+          </div>
+          <div class="bottom">
+            <div class="introductions">书籍简介</div>
+            <div class="detials-introduction"></div>
+          </div>
+           </div>
+           <div class="borderright"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

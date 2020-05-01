@@ -1,0 +1,221 @@
+
+h1 {
+  position: absolute;
+  left: 50%;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 70px;
+  margin-top: 20px;
+  transform: translateX(-50%);
+  letter-spacing: 6px;
+  cursor: pointer;
+}
+h1::before {
+  content: "register";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  width: 0%;
+  overflow: hidden;
+  transition: 1s ease-in;
+}
+h1:hover {
+  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: 1s ease;
+}
+h1:hover::before {
+  width: 100%;
+}
+
+#wrap {
+  width: 550px;
+  margin: 0 auto 0;
+  height: 1000px;
+}
+
+#form-wrap {
+  overflow: hidden;
+  height: 447px;
+  position: relative;
+  top: 0px;
+  transition: all 1s ease-in-out 0.3s;
+}
+#form-wrap:before {
+  content: "";
+  position: absolute;
+  bottom: 128px;
+  left: 0px;
+  background: url("../imgs/before.png");
+  width: 530px;
+  height: 317px;
+}
+#form-wrap:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: url("../imgs/after.png");
+  width: 530px;
+  height: 259px;
+}
+#form-wrap.hide:after,
+#form-wrap.hide:before {
+  display: none;
+}
+#form-wrap:hover {
+  height: 777px;
+  top: -200px;
+}
+form {
+  background: url("../imgs/letter_bg.png");
+  position: relative;
+  top: 200px;
+  overflow: hidden;
+  height: 200px;
+  width: 440px;
+  margin: 0px auto;
+  padding: 25px;
+  padding-top: 30px;
+  transition: all 1s ease-in-out 0.3s;
+}
+#form-wrap:hover form {
+  height: 530px;
+}
+#form-wrap ul li svg {
+  font-size: 20px;
+}
+#form-wrap ul li{
+  position: relative;
+}
+#form-wrap ul li i {
+  font-size: 20px;
+  color: grey;
+}
+#form-wrap ul li:nth-child(2) i {
+  transform: rotateY(180deg);
+}
+
+input {
+  background: url("../imgs/letter_bg.png");
+  color: dimgray;
+  width: 360px;
+  height: 37px;
+  padding: 0px 10px;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.agree {
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 45px;
+  background-color: #bdbdbd;
+  font-size: 20px;
+  position: relative;
+}
+/* 落叶背景 */
+.fall {
+  max-width: 100%;
+}
+.set {
+  position: absolute; /*绝对定位*/
+  width: 100%;
+  height: 100%;
+  z-index: -10; /*防止遮挡*/
+  top: 0; /*距上部*/
+  left: 0; /*距左部*/
+}
+img {
+  width: 100px;
+  user-select: none;
+}
+.set div {
+  position: absolute;
+  display: block; /*块元素*/
+}
+.set div:nth-child(1) {
+  /*第一个子元素*/
+  left: 20%;
+  animation: animate 15s linear infinite;
+  animation-delay: -7s; /*等待时间*/
+}
+.set div:nth-child(2) {
+  left: 50%;
+  animation: animate 15s linear infinite;
+  animation-delay: -5s;
+}
+.set div:nth-child(3) {
+  left: 70%;
+  animation: animate 20s linear infinite;
+}
+.set div:nth-child(4) {
+  left: 0%;
+  animation: animate 15s linear infinite;
+  animation-delay: -5s;
+}
+.set div:nth-child(5) {
+  left: 85%;
+  animation: animate 18s linear infinite;
+  animation-delay: -10s;
+}
+.set div:nth-child(6) {
+  left: 0%;
+  animation: animate 12s linear infinite;
+}
+.set div:nth-child(7) {
+  left: 15%;
+  animation: animate 14s linear infinite;
+}
+.set div:nth-child(8) {
+  left: 60%;
+  animation: animate 15s linear infinite;
+}
+@keyframes animate {
+  /*动画*/
+  0% {
+    top: -10%;
+    opacity: 0; /*透明度*/
+    transform: translateX(20px) rotate(0deg); /*动作 X轴移动 旋转*/
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX(-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateX(20px) rotate(130deg);
+  }
+  80% {
+    transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(-50px) rotate(225deg);
+  }
+}
+
+.set2 {
+  transform: scale(0.8) rotateX(180deg);
+  filter: blur(2px);
+  z-index: -2;
+}
+ul li span{
+  position: absolute;
+  white-space: nowrap;
+  left: 69%;
+  top: 10px;
+  font-size: 14px;
+}
+.success{
+  color: darkseagreen;
+}
+.error{
+  color: orangered;
+}

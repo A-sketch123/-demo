@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="fonts/css/all.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/register.css">
+    <title>注册</title>
+</head>
+<body>
+    <h1>register</h1>
+    <div id="wrap">
+		<br><br><br><br><br><br><br>
+		<div id="form-wrap">
+			<form action="" id="form" >
+				<ul>
+                    <li><label for=""><i class="fa fa-user-circle"></i>
+                    <input type="text" placeholder="英文用户名" name="user" id="username">
+                    <span></span>   
+                </label>
+                
+                </li>
+                    <li>
+                        <label for=""><i class="fa fa-phone"></i>
+                            <input type="text" placeholder="手机号" name="phone" id="phone">
+                            <span></span>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for=""><i class="fa fa-key"></i>
+                            <input type="password" placeholder="数字密码，长度6-10" class="keyfirst" name="sumbit" id="keyone">
+                       <span></span>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for=""><i class="fa fa-key"></i>
+                            <input type="password" placeholder="确认密码" class="key" name="sure" id="keytwo">
+                            <span></span>
+                        </label>
+                        
+                    </li>
+                </ul>
+                <button class="agree">注册</button>
+            </form>
+		</div>
+    </div> 
+    <div class="fall">
+    <div class="set"> 
+        <div><img src="imgs/leaf1.png"></div>
+        <div><img src="imgs/leaf4.png"></div>
+        <div><img src="imgs/leave2.png"></div>
+        <div><img src="imgs/leaf5.png"></div>
+        <div><img src="imgs/leaf3.png"></div>
+        <div><img src="imgs/leaf6.png"></div>
+        <div><img src="imgs/falling3.png"></div>
+        <div><img src="imgs/leaf6.png"></div>
+
+     </div>
+   <div class="set set2">  
+        <div><img src="imgs/falling1.png"></div>
+        <div><img src="imgs/leaf1.png"></div>
+        <div><img src="imgs/leaf5.png"></div>
+        <div><img src="imgs/叶子2.jpg"></div>
+        <div><img src="imgs/leave2.png"></div>
+        <div><img src="imgs/leaf5.png"></div>
+        <div><img src="imgs/leaf4.png"></div>
+        <div><img src="imgs/falling2.png"></div>
+    </div> 
+</div>
+ <script>
+    //  获取下一个兄弟元素
+    window.onload=function(){
+    function next(element){
+        var node=element.nextElementSibling;
+        return node;
+    }
+    // 验证表单
+    var username=document.getElementById('username');
+    var pwdone=document.getElementById('keyone');
+    var pwdtwo=document.getElementById('keytwo');
+    var phone=document.getElementById('phone');
+    username.onblur=function(){
+        var testing=/^[a-zA-Z]{1,16}$/;
+        var flag=testing.test(this.value);
+        message(this,flag,'用户名正确','用户名格式错误');
+        return flag;
+    };
+    phone.onblur=function(){
+        var testing=/^[0-9]{1,15}$/;
+        var flag=testing.test(this.value);
+        message(this,flag,'格式正确','手机格式错误');
+        return flag;
+    }
+    pwdone.onblur=function(){
+        var testing=/^[0-9]{6,10}$/;
+        var flag=testing.test(this.value);
+        message(this,flag,'密码合格','密码格式错误');
+        return flag;
+    };
+    pwdtwo.onblur=function(){
+        if(this.value===pwdone.value&&this.value!==''){
+            flag=1;
+        }else{
+            flag=0;
+        }
+        message(this,flag,'正确','错误，请重新检查');
+        return flag;
+    };
+    document.getElementById('form').onsubmit=function(){
+        // 调用
+       return username.onblur()&& phone.onblur()&&pwdone.onblur()&&pwdtwo.onblur();
+        // 不正确不提交
+    }
+         function message(obj,flag,successMsg,errorMsg){
+        var messobj=next(obj);
+        if(flag){
+            messobj.className='success';
+            messobj.innerHTML=successMsg;
+        }else{
+            messobj.className='error';
+            messobj.innerHTML=errorMsg;
+        }
+         }
+    }
+</script>
+</body>
+</html>
